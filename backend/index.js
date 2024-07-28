@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes.js');
 
 
 
@@ -15,6 +16,8 @@ const mongo_url = process.env.MONGO_URL;
 
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use("/api/auth", authRoutes);
 
 mongoose.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
