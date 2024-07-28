@@ -2,9 +2,9 @@ const { userLogin, userRegister, adminLogin, adminRegister } = require('../contr
 
 const router = require("express").Router();
 
-router.get('/userlogin', userLogin);
+router.post('/userlogin', userLogin);
 router.post('/userregister', userRegister);
-router.get('/adminLogin', adminLogin);
+router.post('/adminLogin', adminLogin);
 router.post('/adminRegister', adminRegister);
 
 module.exports = router;

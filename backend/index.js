@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/authRoutes.js');
+
 
 
 
@@ -15,7 +17,12 @@ const PORT = process.env.PORT;
 const mongo_url = process.env.MONGO_URL;
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cookieParser());
+
+app.use(cors({
+    origin: 'http://localhost:5173', // replace with your frontend origin
+    credentials: true
+}));
 
 app.use("/api/auth", authRoutes);
 
