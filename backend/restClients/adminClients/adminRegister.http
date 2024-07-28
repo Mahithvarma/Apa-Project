@@ -1,0 +1,12 @@
+POST http://localhost:5000/api/auth/adminRegister
+content-type: application/json
+
+{
+    "name": "Mahith",
+    "email": "mahith@gmail.com",
+    "mobile": "7893938041",
+    "password": "Mahi@1234",
+    "role": "admin",
+    "aadhaar": "352899050636",
+    "address": "123 Main St, City, Country"
+}

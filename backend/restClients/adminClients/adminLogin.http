@@ -1,0 +1,7 @@
+GET http://localhost:5000/api/auth/adminLogin
+content-type: application/json
+
+{
+    "emailOrMobile": "mahith@gmail.com",
+    "password": "Mahi@124"
+}
