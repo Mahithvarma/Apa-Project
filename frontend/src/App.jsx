@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import AdminRegister from './components/pages/AdminRegister';
-import Contact from './components/pages/Contact';
-import Help from './components/pages/Help';
-import Home from './components/pages/Home';
-import Login from './components/pages/Login';
+import Footer from './DefaultComponents/Footer';
+import Navbar from './DefaultComponents/Navbar';
+import AdminRegister from './DefaultComponents/pages/AdminRegister';
+import Contact from './DefaultComponents/pages/Contact';
+import Help from './DefaultComponents/pages/Help';
+import Home from './DefaultComponents/pages/Home';
+import Login from './DefaultComponents/pages/Login';
 
 const App = () => {
   return (

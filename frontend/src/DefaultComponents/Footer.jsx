@@ -15,7 +15,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
-
   return (
     <div id="footer" className="bg-[#ffff] text-slate-500 p-1">
       <footer>
