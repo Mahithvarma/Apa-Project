@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './DefaultComponents/Footer';
 import Navbar from './DefaultComponents/Navbar';
@@ -11,7 +11,7 @@ import Login from './DefaultComponents/pages/Login';
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="bg-[#fbfbfb]">
         <Navbar />
         <main>
           <Routes>
