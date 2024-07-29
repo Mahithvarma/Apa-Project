@@ -10,13 +10,11 @@
 
 // export default Footer;
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div id="footer" className="bg-[#ffff] text-slate-500 p-1">
+    <div id="footer" className="bg-[#494949] text-[#ebebeb] p-1">
       <footer>
         <div className="container mx-auto m-2 flex flex-col lg:flex-row justify-between items-center border-b border-gray-800 pb-4 mb-4">
           <div className="mb-4 lg:mb-0">
