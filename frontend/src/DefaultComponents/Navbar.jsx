@@ -1,4 +1,5 @@
 import React from 'react';
+import NavIcon from '../assets/nav-icon.png';
 
 // const Navbar = () => {
 //   return (
@@ -21,16 +22,17 @@ const Navbar = () => {
 
   return (
     <div className=" bg-[#fffefe] fixed w-full z-10">
-      <header className="flex flex-col lg:flex-row justify-between items-center">
-        <div className="flex w-full mx-4 border-b-2 lg:border-b-0 items-center p-4 lg:p-0">
-          <h1 className="flex text-3xl font-bold lg:text-3xl text-[#000000] ">Apartment Management</h1>
+      <header className="flex flex-col lg:flex-row justify-between items-center p-4">
+        <div className="flex w-64 mx-4 border-b-2 lg:border-b-0 items-center p-4 lg:p-0">
+          {/* <h1 className="flex text-3xl font-bold lg:text-3xl ml-8 text-[#000000] ">Apartment Management</h1> */}
           {/* <p className="text-lg text-[#000000] font-light ml-4 mt-1">Order Now</p> */}
+          <img src={NavIcon} alt="Logo" />
         </div>
 
         <nav className={'visible'}>
           <ul className="flex flex-col p-4 space-y-4 lg:space-y-0 items-center lg:flex-row lg:space-x-4 lg:p-5 lg:mr-8">
             <li>
-              <Link className="font-semibold p-4 text-[#000000] hover:text-[rgb(255,255,255)] hover:bg-black hover:p-2 hover:rounded-lg" to="/">
+              <Link className="font-semibold p-4 text-[#000000] hover:text-[rgb(255,255,255)] hover:bg-[#d593f1] hover:p-2 hover:rounded-lg" to="/">
                 Home
               </Link>
             </li>
