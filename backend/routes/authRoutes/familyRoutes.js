@@ -2,7 +2,7 @@ const { familyRegister, familyLogin } = require("../../controllers/authControlle
 
 const router = require("express").Router();
 
-router.post('/familylogin', familyLogin);
-router.post('/familyregister', familyRegister);
+router.post('/familyLogin', familyLogin);
+router.post('/familyRegister', familyRegister);
 
 module.exports = router;

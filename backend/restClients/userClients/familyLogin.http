@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/auth/familylogin
+POST http://localhost:5000/api/auth/familyLogin
 content-type: application/json
 
 {

@@ -1,0 +1,10 @@
+POST http://localhost:5000/api/block/addFlat/66b3c8dc82d94612e4cf4426
+content-type: application/json
+
+{
+  "flatNo": 105,
+  "flatType": "2BHK",
+  "flatArea": 1400,
+  "flatPrice": 30000,
+  "flatStatus": "Available"
+}

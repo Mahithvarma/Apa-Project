@@ -51,7 +51,7 @@ const familySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-});
+}, { timestamps: true });
 
 const Family = mongoose.model('Family', familySchema, "family");
 

@@ -1,0 +1,8 @@
+POST http://localhost:5000/api/block/allocateFlat
+content-type: application/json
+
+{
+  "blockId": "66b3c8dc82d94612e4cf4426",
+  "flatNo": 102,
+  "familyId": "66b3bc9a3a7d0f94c064e901"
+}

@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const adminauthRoutes = require('./routes/authRoutes/adminRoutes.js');
 const familyauthRoutes = require('./routes/authRoutes/familyRoutes.js');
+const blockRoutes = require("./routes/blockRoutes/blockRoutes.js");
 
 
 
@@ -27,6 +28,7 @@ app.use(cors({
 
 app.use("/api/auth", adminauthRoutes);
 app.use("/api/auth", familyauthRoutes);
+app.use("/api/block", blockRoutes);
 
 mongoose.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
