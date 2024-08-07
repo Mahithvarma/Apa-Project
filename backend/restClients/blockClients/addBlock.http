@@ -1,0 +1,23 @@
+POST http://localhost:5000/api/block/addBlock
+content-type: application/json
+
+{
+  "name": "Block A",
+  "totalFloors": 5,
+  "flats": [
+    {
+      "flatNo": 101,
+      "flatType": "2BHK",
+      "flatArea": 1200,
+      "flatPrice": 25000,
+      "flatStatus": "Available"
+    },
+    {
+      "flatNo": 102,
+      "flatType": "3BHK",
+      "flatArea": 1500,
+      "flatPrice": 30000,
+      "flatStatus": "Available"
+    }
+  ]
+}
