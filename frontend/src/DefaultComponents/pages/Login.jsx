@@ -32,8 +32,8 @@ const Login = () => {
       try {
         const response = await axios.post("http://localhost:5000/api/auth/adminLogin", { emailOrMobile: emailormobile, password: password }, { withCredentials: true });
         if (response) {
-          console.log(response);
-          navigate('/');
+          localStorage.setItem(response, JSON.stringify());
+          navigate('/adminHome');
         }
       }
       catch (err) {

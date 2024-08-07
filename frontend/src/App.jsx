@@ -7,6 +7,9 @@ import Contact from './DefaultComponents/pages/Contact';
 import Help from './DefaultComponents/pages/Help';
 import Home from './DefaultComponents/pages/Home';
 import Login from './DefaultComponents/pages/Login';
+import UserCreation from './AdminComponents/UserCreation';
+import AdminMain from './AdminComponents/AdminMain';
+import AdminHome from './AdminComponents/AdminHome';
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin-register" element={<AdminRegister />} />
+            <Route path="/adminHome" element={<AdminHome />} />
+            <Route path="/adminMain" element={<AdminMain />} />
+            <Route path="/userCreation" element={<UserCreation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/help" element={<Help />} />
           </Routes>
