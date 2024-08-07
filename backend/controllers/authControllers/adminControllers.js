@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const Admin = require('../models/adminModel.js');
+const Admin = require('../../models/adminModel.js');
 const bcrypt = require('bcryptjs');
 
 const adminLogin = async (req, res, next) => {
@@ -17,13 +17,16 @@ const adminLogin = async (req, res, next) => {
 
         const token = jwt.sign({ id: admin._id, role: admin.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        res.cookie('token', token, {
-            httpOnly: true,
-            maxAge: 3600000,
-        });
+        cookieOptions =  {
+            expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+            httpOnly: false,
+            secure: false,
+            domain: 'localhost',
+            path: '/'
+        };
 
-        return res.status(200).json({
-            message: 'Login successful', user: {
+        return res.status(200).cookie('token', token, cookieOptions).json({
+            message: 'Login successful', admin: {
                 id: admin._id,
                 name: admin.name,
                 email: admin.email,
@@ -58,15 +61,8 @@ const adminRegister = async (req, res, next) => {
             address,
         });
 
-        const token = jwt.sign({ id: newAdmin._id, role: newAdmin.role }, process.env.JWT_SECRET, { expiresIn: '1h' });
-
-        res.cookie('token', token, {
-            httpOnly: true,
-            maxAge: 3600000,
-        });
-
         return res.status(201).json({
-            message: 'Registration successful', user: {
+            message: 'Registration successful', admin: {
                 id: newAdmin._id,
                 name: newAdmin.name,
                 email: newAdmin.email,
@@ -78,12 +74,4 @@ const adminRegister = async (req, res, next) => {
     }
 };
 
-const userLogin = (req, res, next) => {
-
-};
-
-const userRegister = (req, res, next) => {
-
-};
-
-module.exports = { userLogin, adminLogin, adminRegister, userRegister };
+module.exports = { adminLogin, adminRegister };

@@ -1,0 +1,7 @@
+POST http://localhost:5000/api/auth/familylogin
+content-type: application/json
+
+{
+    "emailOrMobile": "john.doe@example.com",
+    "password": "securePassword123"
+}
