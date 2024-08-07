@@ -1,0 +1,28 @@
+POST http://localhost:5000/api/auth/familyregister
+content-type: application/json
+
+{
+  "primary": {
+    "name": "John Doe",
+    "aadhaarCardNo": "1234-5678-9101",
+    "age": 35
+  },
+  "members": [
+    {
+      "name": "Jane Doe",
+      "aadhaarCardNo": "2345-6789-1011",
+      "age": 30
+    },
+    {
+      "name": "Emily Doe",
+      "aadhaarCardNo": "3456-7890-1122",
+      "age": 10
+    }
+  ],
+  "mobile": "9876543210",
+  "alternativeMobile": "8765432109",
+  "email": "john.doe@example.com",
+  "password": "securePassword123",
+  "block": "A",
+  "flatNo": "101"
+}

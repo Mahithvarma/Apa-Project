@@ -1,4 +1,4 @@
-GET http://localhost:5000/api/auth/adminLogin
+POST http://localhost:5000/api/auth/adminLogin
 content-type: application/json
 
 {
