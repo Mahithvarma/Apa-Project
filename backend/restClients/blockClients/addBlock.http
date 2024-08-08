@@ -2,8 +2,8 @@ POST http://localhost:5000/api/block/addBlock
 content-type: application/json
 
 {
-  "name": "Block A",
-  "totalFloors": 5,
+  "name": "Block B",
+  "totalFloors": 6,
   "flats": [
     {
       "flatNo": 101,

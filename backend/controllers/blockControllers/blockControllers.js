@@ -27,4 +27,39 @@ const addBlock = async (req, res, next) => {
     }
 };
 
-module.exports = { addBlock };
+const getAllBlocks = async (req, res, next) => {
+    try{
+        const blocks = await Block.find();
+
+        if(!blocks){
+            return res.status(400).json({ message: 'No blocks found' });
+        }
+
+        let totalFlats = 0;
+        let totalFilled = 0;
+        let totalAvailable = 0;
+
+
+        blocks.map(block => {
+            totalFlats += block.flats.length;
+            let filled = 0;
+            let available = 0;
+            block.flats.forEach(flat => {
+              if (flat.flatStatus === "Available") {
+                totalAvailable++;
+                available++;
+              } else if (flat.flatStatus === "Occupied") {
+                totalFilled++;
+                filled++;
+              }
+            });
+
+          });
+        return res.status(200).json({ blocks, totalFlats, totalFilled, totalAvailable });
+    }
+    catch(err){
+        next(err);
+    }
+}
+
+module.exports = { addBlock , getAllBlocks };

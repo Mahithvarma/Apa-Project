@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/admin-register" element={<AdminRegister />} />
             <Route path="/adminHome" element={<AdminHome />} />
             <Route path="/adminMain" element={<AdminMain />} />
-            <Route path="/userCreation" element={<UserCreation />} />
+            <Route path="/adminMain/userCreation" element={<UserCreation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/help" element={<Help />} />
           </Routes>
